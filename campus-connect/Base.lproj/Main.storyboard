@@ -48,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="830" y="-719"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -88,7 +88,78 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="1722" y="-698"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="mBP-cj-06i">
+            <objects>
+                <viewController id="zKb-wk-iUY" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xcl-G8-jOb"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kry-UJ-Rr7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jSN-xD-BRe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="lmu-PI-UPj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="koZ-mO-0db" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1406" y="0.0"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Iva-7q-ZcH">
+            <objects>
+                <viewController id="Cj2-SV-4WO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7BO-5B-Vte"/>
+                        <viewControllerLayoutGuide type="bottom" id="lQA-IV-h9w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c7F-Hw-pPE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="gZq-2h-D0I"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SuF-tO-RHr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="830" y="904"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="TP3-Mn-0Bb">
+            <objects>
+                <viewController id="wBl-bG-iur" customClass="SettingsVC" customModule="campus_connect" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MUh-Ga-elU"/>
+                        <viewControllerLayoutGuide type="bottom" id="DXO-la-U8y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="id2-XB-9e0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUs-YZ-f0B">
+                                <rect key="frame" x="140.5" y="318.5" width="94" height="30"/>
+                                <state key="normal" title="Cerrar Sesión"/>
+                                <connections>
+                                    <action selector="signOutTapped:" destination="wBl-bG-iur" eventType="touchUpInside" id="qBT-8b-BdJ"/>
+                                    <segue destination="4sl-w8-gUa" kind="show" identifier="goToSignIn" id="y0W-co-NGd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qUs-YZ-f0B" firstAttribute="centerX" secondItem="id2-XB-9e0" secondAttribute="centerX" id="fhw-PI-Cl6"/>
+                            <constraint firstItem="qUs-YZ-f0B" firstAttribute="centerY" secondItem="id2-XB-9e0" secondAttribute="centerY" id="rcd-XA-ghz"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="mw8-Rl-1zI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uvg-Gu-ryN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1720.8" y="903.59820089955031"/>
         </scene>
         <!--Sign InVC-->
         <scene sceneID="rL9-ZW-Pht">
@@ -180,7 +251,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gka-Nt-pNQ" customClass="FancyTextField" customModule="campus_connect" customModuleProvider="target">
-                                <rect key="frame" x="52.5" y="278" width="270" height="30"/>
+                                <rect key="frame" x="53" y="278" width="270" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="TDk-9Q-95D"/>
                                 </constraints>
@@ -233,11 +304,12 @@
                     <connections>
                         <outlet property="emailField" destination="Gka-Nt-pNQ" id="JHD-Ad-WNb"/>
                         <outlet property="pwdField" destination="9W9-XU-UR2" id="MOF-3x-89G"/>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="goToFeed" id="Sne-M4-fy7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rM5-bf-bak" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-906.39999999999998" y="-12.143928035982009"/>
+            <point key="canvasLocation" x="-903" y="0.0"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -252,6 +324,9 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="zKb-wk-iUY" kind="relationship" relationship="viewControllers" id="cBS-aV-lUJ"/>
+                        <segue destination="Cj2-SV-4WO" kind="relationship" relationship="viewControllers" id="a75-si-nJD"/>
+                        <segue destination="wBl-bG-iur" kind="relationship" relationship="viewControllers" id="csB-NY-Zpk"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>

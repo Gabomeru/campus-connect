@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
     
@@ -19,6 +20,13 @@ class SignInVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID){
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
+    }
+    
 
     @IBAction func facebookBtnTapped(_ sender: Any) {
         let facebookLogin = FBSDKLoginManager()
@@ -42,6 +50,9 @@ class SignInVC: UIViewController {
                 print("GABO: Unable to authenticate with FIREBASE - \(error)")
             } else {
                 print("GABO: Successfully authenticated with FIREBASE ")
+                if let user = user{
+                    self.completeSignIn(id: user.uid)
+                }
             }
         })
     }
@@ -51,17 +62,31 @@ class SignInVC: UIViewController {
             FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
                 if error == nil {
                     print("GABO: Email user authenticated with Firebase.")
+                    if let user = user{
+                        self.completeSignIn(id: user.uid)
+                    }
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
                         if error != nil {
                             print("GABO: Unable to authenticate with Firebase using email.")
                         } else{
                             print("GABO: Successfully authenticated with Firebase (email)")
+                            if let user = user{
+                                self.completeSignIn(id: user.uid)
+                            }
                         }
                     })
                 }
             })
         }
-
     }
+    
+    func completeSignIn (id : String){
+        let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        print("GABO: Data saved to keychain \(keychainResult)")
+        performSegue(withIdentifier: "goToFeed", sender: nil)
+
+        
+    }
+
 }
