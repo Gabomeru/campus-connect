@@ -22,6 +22,7 @@
 		0547DCCF1E3022DE0062435C /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0547DCCE1E3022DE0062435C /* SettingsVC.swift */; };
 		0547DCD31E30544D0062435C /* FancyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0547DCD21E30544D0062435C /* FancyImage.swift */; };
 		0547DCD51E305A0F0062435C /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0547DCD41E305A0F0062435C /* PostCell.swift */; };
+		0547DCD81E3080D90062435C /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0547DCD71E3080D90062435C /* DataService.swift */; };
 		AE40786C8A7E057552CF198B /* Pods_campus_connect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0206036BDFA9ACFBDE6C73 /* Pods_campus_connect.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		0547DCCE1E3022DE0062435C /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		0547DCD21E30544D0062435C /* FancyImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyImage.swift; sourceTree = "<group>"; };
 		0547DCD41E305A0F0062435C /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		0547DCD71E3080D90062435C /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		481B8DEE7E226BE83B8FFE64 /* Pods-campus-connect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-campus-connect.debug.xcconfig"; path = "Pods/Target Support Files/Pods-campus-connect/Pods-campus-connect.debug.xcconfig"; sourceTree = "<group>"; };
 		5C0206036BDFA9ACFBDE6C73 /* Pods_campus_connect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_campus_connect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E765AA5F5E32145A52BA2D22 /* Pods-campus-connect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-campus-connect.release.xcconfig"; path = "Pods/Target Support Files/Pods-campus-connect/Pods-campus-connect.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		0547DCA71E2F95F10062435C /* campus-connect */ = {
 			isa = PBXGroup;
 			children = (
+				0547DCD61E3080B30062435C /* Services */,
 				0547DCC51E2FC1FC0062435C /* Util */,
 				0547DCBE1E2F9F630062435C /* Model */,
 				0547DCBF1E2F9F6C0062435C /* View */,
@@ -131,6 +134,14 @@
 				0547DCC81E2FC2890062435C /* Constants.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		0547DCD61E3080B30062435C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0547DCD71E3080D90062435C /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		B037F30D8A558063A0A77247 /* Pods */ = {
@@ -278,6 +289,7 @@
 				0547DCAD1E2F95F10062435C /* SecondViewController.swift in Sources */,
 				0547DCCD1E2FC5BB0062435C /* FancyTextField.swift in Sources */,
 				0547DCC41E2FC1800062435C /* FancyView.swift in Sources */,
+				0547DCD81E3080D90062435C /* DataService.swift in Sources */,
 				0547DCA91E2F95F10062435C /* AppDelegate.swift in Sources */,
 				0547DCAB1E2F95F10062435C /* FeedVc.swift in Sources */,
 				0547DCD31E30544D0062435C /* FancyImage.swift in Sources */,
