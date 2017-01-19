@@ -16,6 +16,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     @IBOutlet weak var imageAdd: UIImageView!
     @IBOutlet weak var captionField: FancyTextField!
     
+    
     var posts = [Post]()
     var imagePicker : UIImagePickerController!
     static var imageCache : NSCache<NSString, UIImage> = NSCache()
@@ -41,7 +42,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                     print("Snap: \(snap)")
                     if let postDict = snap.value as? Dictionary<String,Any>{
                         let key = snap.key
-                        let post = Post(postKey: key, postData: postDict)
+                        let post = Post(postKey: key, postData: postDict as Dictionary<String, AnyObject>)
                         self.posts.append(post)
                         
                     }
