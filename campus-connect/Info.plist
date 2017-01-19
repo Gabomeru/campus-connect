@@ -65,6 +65,6 @@
 		<string>fbshareextension</string>
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>El acceso a fotos es necesario para publicar</string>
+	<string>El acceso al álbum de fotos es necesario para publicar</string>
 </dict>
 </plist>
