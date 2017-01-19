@@ -43,13 +43,17 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Hex-Wy-ipD">
                                         <rect key="frame" x="10" y="10" width="343" height="54"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="KcM-Z9-Il9">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="KcM-Z9-Il9">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" red="0.1376128197" green="0.33630168440000002" blue="0.75656253100000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Fvj-nq-lFI"/>
                                                     <constraint firstAttribute="width" constant="50" id="JDy-yW-LGf"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="iFN-iJ-ZfW" appends="YES" id="rQo-IF-sIr"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Escribe tu noticia aquí..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iFY-br-6hQ" customClass="FancyTextField" customModule="campus_connect" customModuleProvider="target">
                                                 <rect key="frame" x="60" y="0.0" width="223" height="34"/>
@@ -208,10 +212,16 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Noticias" image="Noticias" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="imageAdd" destination="KcM-Z9-Il9" id="3FN-AY-V1z"/>
                         <outlet property="searchDisplayController" destination="sM8-xx-r2O" id="poE-0T-hsx"/>
                         <outlet property="tableView" destination="jvG-IA-m1S" id="zum-OD-B3n"/>
                     </connections>
                 </viewController>
+                <tapGestureRecognizer id="iFN-iJ-ZfW">
+                    <connections>
+                        <action selector="addImageTapped:" destination="9pv-A4-QxB" id="wQ3-9J-4fT"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="829.60000000000002" y="-892.80359820089961"/>
         </scene>
