@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0547DCA91E2F95F10062435C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0547DCA81E2F95F10062435C /* AppDelegate.swift */; };
-		0547DCAB1E2F95F10062435C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0547DCAA1E2F95F10062435C /* FirstViewController.swift */; };
+		0547DCAB1E2F95F10062435C /* FeedVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0547DCAA1E2F95F10062435C /* FeedVc.swift */; };
 		0547DCAD1E2F95F10062435C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0547DCAC1E2F95F10062435C /* SecondViewController.swift */; };
 		0547DCB01E2F95F10062435C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0547DCAE1E2F95F10062435C /* Main.storyboard */; };
 		0547DCB21E2F95F10062435C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0547DCB11E2F95F10062435C /* Assets.xcassets */; };
@@ -21,13 +21,14 @@
 		0547DCCD1E2FC5BB0062435C /* FancyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0547DCCC1E2FC5BB0062435C /* FancyTextField.swift */; };
 		0547DCCF1E3022DE0062435C /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0547DCCE1E3022DE0062435C /* SettingsVC.swift */; };
 		0547DCD31E30544D0062435C /* FancyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0547DCD21E30544D0062435C /* FancyImage.swift */; };
+		0547DCD51E305A0F0062435C /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0547DCD41E305A0F0062435C /* PostCell.swift */; };
 		AE40786C8A7E057552CF198B /* Pods_campus_connect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0206036BDFA9ACFBDE6C73 /* Pods_campus_connect.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0547DCA51E2F95F10062435C /* campus-connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "campus-connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0547DCA81E2F95F10062435C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0547DCAA1E2F95F10062435C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		0547DCAA1E2F95F10062435C /* FeedVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVc.swift; sourceTree = "<group>"; };
 		0547DCAC1E2F95F10062435C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		0547DCAF1E2F95F10062435C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0547DCB11E2F95F10062435C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,6 +42,7 @@
 		0547DCCC1E2FC5BB0062435C /* FancyTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyTextField.swift; sourceTree = "<group>"; };
 		0547DCCE1E3022DE0062435C /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		0547DCD21E30544D0062435C /* FancyImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyImage.swift; sourceTree = "<group>"; };
+		0547DCD41E305A0F0062435C /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		481B8DEE7E226BE83B8FFE64 /* Pods-campus-connect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-campus-connect.debug.xcconfig"; path = "Pods/Target Support Files/Pods-campus-connect/Pods-campus-connect.debug.xcconfig"; sourceTree = "<group>"; };
 		5C0206036BDFA9ACFBDE6C73 /* Pods_campus_connect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_campus_connect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E765AA5F5E32145A52BA2D22 /* Pods-campus-connect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-campus-connect.release.xcconfig"; path = "Pods/Target Support Files/Pods-campus-connect/Pods-campus-connect.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				0547DCCA1E2FC4F60062435C /* FancyBtn.swift */,
 				0547DCCC1E2FC5BB0062435C /* FancyTextField.swift */,
 				0547DCD21E30544D0062435C /* FancyImage.swift */,
+				0547DCD41E305A0F0062435C /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -115,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				0547DCC11E2FA0030062435C /* SignInVC.swift */,
-				0547DCAA1E2F95F10062435C /* FirstViewController.swift */,
+				0547DCAA1E2F95F10062435C /* FeedVc.swift */,
 				0547DCAC1E2F95F10062435C /* SecondViewController.swift */,
 				0547DCCE1E3022DE0062435C /* SettingsVC.swift */,
 			);
@@ -276,10 +279,11 @@
 				0547DCCD1E2FC5BB0062435C /* FancyTextField.swift in Sources */,
 				0547DCC41E2FC1800062435C /* FancyView.swift in Sources */,
 				0547DCA91E2F95F10062435C /* AppDelegate.swift in Sources */,
-				0547DCAB1E2F95F10062435C /* FirstViewController.swift in Sources */,
+				0547DCAB1E2F95F10062435C /* FeedVc.swift in Sources */,
 				0547DCD31E30544D0062435C /* FancyImage.swift in Sources */,
 				0547DCC21E2FA0030062435C /* SignInVC.swift in Sources */,
 				0547DCC91E2FC2890062435C /* Constants.swift in Sources */,
+				0547DCD51E305A0F0062435C /* PostCell.swift in Sources */,
 				0547DCCB1E2FC4F60062435C /* FancyBtn.swift in Sources */,
 				0547DCCF1E3022DE0062435C /* SettingsVC.swift in Sources */,
 			);
